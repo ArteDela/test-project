@@ -1,0 +1,35 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto-Regular';
+	box-sizing: border-box;
+	border: 0;
+}
+.container
+{
+	max-width: 1300px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.g-flex
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.cart
+{
+	background: #05141F;
+	color: white;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 40px;
+	transition: .3s;
+	cursor: pointer;
+}
+.cart:hover
+{
+	opacity: .8;
+}

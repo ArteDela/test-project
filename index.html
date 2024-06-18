@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="fonts.css">
+	<link rel="stylesheet" href="default.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section class="catalog container">
+		<h1 class="catalog__title">Заголовок</h1>
+		<div class="catalog__list">
+			<div class="catalog__item">
+				<img src="img/img-1.png" alt="">
+				<div class="catalog__item-wr">
+					<h2>Шторы</h2>
+					<p>Распространяется на ткани, пошив и монтаж</p>
+					<button class="catalog__more-detail" onclick="mainObject.popup.open('._curtains','curtains')">подробнее</button>
+				</div>
+			</div>
+			<div class="catalog__item">
+				<img src="img/img-2.png" alt="">
+				<div class="catalog__item-wr">
+					<h2>Краски</h2>
+					<p>
+						Стоимость зачтем при дальнейшей покупке краски общей стоимостью от 15 000 ₽
+					</p>
+					<button class="catalog__more-detail" onclick="mainObject.popup.open('._colors','colors')">подробнее</button>
+				</div>
+			</div>
+			<div class="catalog__item">
+				<img src="img/img-3.png" alt="">
+				<div class="catalog__item-wr">
+					<h2>Обои</h2>
+					<p>Скидка действует при покупке обоев на сумму свыше 15 000 ₽</p>
+					<button class="catalog__more-detail" onclick="mainObject.popup.open('._wallpaper','wallpaper')">подробнее</button>
+				</div>
+			</div>
+			<div class="catalog__item">
+				<img src="img/img-4.png" alt="">
+				<div class="catalog__item-wr">
+					<h2>Диваны</h2>
+					<p>
+						Стоимость зачтем при дальнейшей оплате заказа общей стоимостью от 70 000 ₽
+					</p>
+					<button class="catalog__more-detail" onclick="mainObject.popup.open('._sofas','sofas')">подробнее</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="_curtains" style="display:none;">
+		<div class="g-popup__content _popup-content">
+			<div onclick="mainObject.popup.close()" class="g-popup__clsoe">
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M15.2559 1.92259C15.5814 1.59715 15.5814 1.06951 15.2559 0.744078C14.9305 0.418641 14.4028 0.418641 14.0774 0.744078L8 6.82149L1.92259 0.744078C1.59715 0.418641 1.06952 0.418641 0.744079 0.744078C0.418642 1.06951 0.418642 1.59715 0.744079 1.92259L6.82149 8L0.744078 14.0774C0.418641 14.4028 0.418641 14.9305 0.744078 15.2559C1.06951 15.5814 1.59715 15.5814 1.92259 15.2559L8 9.17851L14.0774 15.2559C14.4028 15.5814 14.9305 15.5814 15.2559 15.2559C15.5814 14.9305 15.5814 14.4028 15.2559 14.0774L9.17851 8L15.2559 1.92259Z" fill="#1C294D"/>
+				</svg>
+			</div>
+			<h2 class="_title">Шторы</h2>
+			<p class="_descr">Распространяется на ткани, пошив и монтаж</p>
+			<div class="">
+				количество товара <span class="_counter"></span>
+			</div>
+			<button class="cart" onclick="mainObject.cart.add(this, 'curtains')">добавить в корзину</button>
+			<button class="cart" onclick="mainObject.cart.remove(this, 'curtains')">удалить из корзины</button>
+		</div>
+	</div>
+	<div class="_colors" style="display:none;">
+		<div class="g-popup__content _popup-content">
+			<div onclick="mainObject.popup.close()" class="g-popup__clsoe">
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M15.2559 1.92259C15.5814 1.59715 15.5814 1.06951 15.2559 0.744078C14.9305 0.418641 14.4028 0.418641 14.0774 0.744078L8 6.82149L1.92259 0.744078C1.59715 0.418641 1.06952 0.418641 0.744079 0.744078C0.418642 1.06951 0.418642 1.59715 0.744079 1.92259L6.82149 8L0.744078 14.0774C0.418641 14.4028 0.418641 14.9305 0.744078 15.2559C1.06951 15.5814 1.59715 15.5814 1.92259 15.2559L8 9.17851L14.0774 15.2559C14.4028 15.5814 14.9305 15.5814 15.2559 15.2559C15.5814 14.9305 15.5814 14.4028 15.2559 14.0774L9.17851 8L15.2559 1.92259Z" fill="#1C294D"/>
+				</svg>
+			</div>
+			<h2 class="_title">краски</h2>
+			<p class="_descr">
+				Стоимость зачтем при дальнейшей покупке краски общей стоимостью от 15 000 ₽
+			</p>
+			<div class="">
+				количество товара <span class="_counter"></span>
+			</div>
+			<button class="cart" onclick="mainObject.cart.add(this, 'colors')">добавить в корзину</button>
+			<button class="cart" onclick="mainObject.cart.remove(this, 'colors')">удалить из корзины</button>
+		</div>
+	</div>
+	<div class="_wallpaper" style="display:none;">
+		<div class="g-popup__content _popup-content">
+			<div onclick="mainObject.popup.close()" class="g-popup__clsoe">
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M15.2559 1.92259C15.5814 1.59715 15.5814 1.06951 15.2559 0.744078C14.9305 0.418641 14.4028 0.418641 14.0774 0.744078L8 6.82149L1.92259 0.744078C1.59715 0.418641 1.06952 0.418641 0.744079 0.744078C0.418642 1.06951 0.418642 1.59715 0.744079 1.92259L6.82149 8L0.744078 14.0774C0.418641 14.4028 0.418641 14.9305 0.744078 15.2559C1.06951 15.5814 1.59715 15.5814 1.92259 15.2559L8 9.17851L14.0774 15.2559C14.4028 15.5814 14.9305 15.5814 15.2559 15.2559C15.5814 14.9305 15.5814 14.4028 15.2559 14.0774L9.17851 8L15.2559 1.92259Z" fill="#1C294D"/>
+				</svg>
+			</div>
+			<h2 class="_title">обои</h2>
+			<p class="_descr">
+				Скидка действует при покупке обоев на сумму свыше 15 000 ₽
+			</p>
+			<div class="">
+				количество товара <span class="_counter"></span>
+			</div>
+			<button class="cart" onclick="mainObject.cart.add(this, 'wallpaper')">добавить в корзину</button>
+			<button class="cart" onclick="mainObject.cart.remove(this, 'wallpaper')">удалить из корзины</button>
+		</div>
+	</div>
+	<div class="_sofas" style="display:none;">
+		<div class="g-popup__content _popup-content">
+			<div onclick="mainObject.popup.close()" class="g-popup__clsoe">
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M15.2559 1.92259C15.5814 1.59715 15.5814 1.06951 15.2559 0.744078C14.9305 0.418641 14.4028 0.418641 14.0774 0.744078L8 6.82149L1.92259 0.744078C1.59715 0.418641 1.06952 0.418641 0.744079 0.744078C0.418642 1.06951 0.418642 1.59715 0.744079 1.92259L6.82149 8L0.744078 14.0774C0.418641 14.4028 0.418641 14.9305 0.744078 15.2559C1.06951 15.5814 1.59715 15.5814 1.92259 15.2559L8 9.17851L14.0774 15.2559C14.4028 15.5814 14.9305 15.5814 15.2559 15.2559C15.5814 14.9305 15.5814 14.4028 15.2559 14.0774L9.17851 8L15.2559 1.92259Z" fill="#1C294D"/>
+				</svg>
+			</div>
+			<h2 class="_title">Диваны</h2>
+			<p class="_descr">
+				Стоимость зачтем при дальнейшей оплате заказа общей стоимостью от 70 000 ₽
+			</p>
+			<div class="">
+				количество товара <span class="_counter"></span>
+			</div>
+			<button class="cart" onclick="mainObject.cart.add(this, 'sofas')">добавить в корзину</button>
+			<button class="cart" onclick="mainObject.cart.remove(this, 'sofas')">удалить из корзины</button>
+		</div>
+	</div>
+
+	<div class="_overlay popup"></div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
